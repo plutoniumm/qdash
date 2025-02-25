@@ -65,6 +65,10 @@ with gr.Blocks(css=CSS("global.css")) as demo:
             HM_btn = gr.Button("Generate Heatmap")
             HM_btn.click(generate_plots, inputs=[], outputs=[HM, LC])
 
+    with gr.Row():
+        gr.Button("Log File", link="gradio_api/file=data/main.log")
+        gr.Button("Demo File", link="gradio_api/file=data/file.txt")
+
 os.makedirs("data", exist_ok=True)
 demo.launch()
 # demo.launch(share=True)

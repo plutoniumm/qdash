@@ -1,0 +1,10 @@
+body {
+  filter: invert(1);
+}
+
+.show-api,
+.show-api-divider,
+.built-with,
+.settings+.divider {
+  display: none;
+}
